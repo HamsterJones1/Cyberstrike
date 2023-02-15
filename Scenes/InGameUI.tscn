@@ -1,0 +1,92 @@
+[gd_scene format=2]
+
+[node name="InGameUI" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="BackgroundPanel" type="Panel" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="TokensLabel" type="RichTextLabel" parent="."]
+anchor_left = 0.0537109
+anchor_top = 0.863333
+anchor_right = 0.244141
+anchor_bottom = 0.93
+text = "X Action Tokens Remaining
+"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BankLabel" type="RichTextLabel" parent="TokensLabel"]
+margin_left = 4.0
+margin_top = 23.0
+margin_right = 181.0
+margin_bottom = 63.0
+text = "$$$ Remaining
+"
+
+[node name="BaseOutlineRect" type="ColorRect" parent="."]
+anchor_left = 0.0488281
+anchor_top = 0.0833333
+anchor_right = 0.439453
+anchor_bottom = 0.75
+color = Color( 0.0666667, 0.266667, 0.4, 1 )
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="BaseOutlineLabel" type="RichTextLabel" parent="BaseOutlineRect"]
+margin_top = -30.0
+margin_right = 203.0
+margin_bottom = 10.0
+text = "Your Base"
+
+[node name="UndoButton" type="Button" parent="."]
+anchor_left = 0.854492
+anchor_top = 0.833333
+anchor_right = 0.952148
+anchor_bottom = 0.916667
+text = "UNDO"
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="Market" type="Node" parent="."]
+
+[node name="OffenceMarketList" type="ItemList" parent="Market"]
+anchor_left = 0.537109
+anchor_top = 0.166667
+anchor_right = 0.683594
+anchor_bottom = 0.375
+items = [ "Scout Random", null, false, "Scout Exact", null, false, " ", null, true, "Item 3", null, false, "Item 4", null, false, " ", null, true, "Item 6", null, false ]
+allow_reselect = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="MarketTypeOptionButton" type="OptionButton" parent="Market"]
+anchor_left = 0.530273
+anchor_top = 0.0483333
+anchor_right = 0.734375
+anchor_bottom = 0.0816667
+margin_left = 7.0
+margin_top = 21.0
+margin_right = -83.0
+margin_bottom = 21.0
+text = "Offence Market"
+items = [ "Offence Market", null, false, 0, null, "Defence Market", null, false, 1, null, "Income Market", null, false, 2, null ]
+selected = 0
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="MarketTextOutline" type="ColorRect" parent="Market"]
+anchor_left = 0.708008
+anchor_top = 0.0833333
+anchor_right = 0.952148
+anchor_bottom = 0.375
+__meta__ = {
+"_edit_use_anchors_": true
+}
